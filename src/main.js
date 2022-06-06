@@ -9,6 +9,8 @@ import showMessage from "./utils/showMessage";
 import { loading } from "./directives/loading";
 import vLazy from "./directives/lazy";
 import "./eventBus";
+
+store.dispatch("setting/fetchSetting");
 Vue.prototype.$showMessage = showMessage;
 Vue.directive("loading", loading);
 Vue.directive("lazy", vLazy);
