@@ -65,6 +65,7 @@ export default {
   display: flex;
   margin-bottom: 20px;
   border-radius: 15px;
+  box-shadow: 0 0 5px #888;
   &:hover {
     box-shadow: -1px 1px 5px #888;
     transform: scale(1.01) translate(3px, -3px);
