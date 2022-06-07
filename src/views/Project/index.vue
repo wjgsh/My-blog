@@ -60,12 +60,13 @@ export default {
   scroll-behavior: smooth;
 }
 .project-item {
-  transition: 0.5s;
+  transition: 0.3s;
   padding: 20px;
   display: flex;
   margin-bottom: 20px;
+  border-radius: 15px;
   &:hover {
-    box-shadow: -1px 1px 5px #000;
+    box-shadow: -1px 1px 5px #888;
     transform: scale(1.01) translate(3px, -3px);
     color: inherit;
   }
@@ -74,7 +75,7 @@ export default {
     min-height: 150px;
     flex: 0 0 auto;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 15px;
     margin-right: 15px;
   }
   .info {
