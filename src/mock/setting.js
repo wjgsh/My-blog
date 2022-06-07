@@ -4,7 +4,7 @@ Mock.mock("/api/setting", "get", {
   msg: "",
   data: {
     avatar: "http://tianhao-imglist.dalivan.tech/img/0.jpg",
-    siteTitle: "저노(wjsh)-site",
+    siteTitle: "저노(wjsh)-blog",
     github: "https://github.com/wjgsh",
     qq: "1664927010",
     qqQrCode: "http://tianhao-imglist.dalivan.tech/img/1.jpg",
