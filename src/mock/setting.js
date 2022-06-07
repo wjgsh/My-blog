@@ -13,6 +13,6 @@ Mock.mock("/api/setting", "get", {
     mail: "1664927010@qq.com",
     icp: "wjsh's blog",
     githubName: "wjgsh",
-    favicon: "",
+    favicon: "http://tianhao-imglist.dalivan.tech/img/favicon.ico",
   },
 });
