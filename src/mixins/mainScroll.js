@@ -4,6 +4,11 @@ export default function(refValue) {
       this.$bus.$on("setMainScroll", this.handleSetMainScroll);
       this.$refs[refValue].addEventListener("scroll", this.handleMainScroll);
     },
+    beforeDestroy() {
+      this.$bus.$emit("mainScroll");
+      this.$bus.$off("setMainScroll", this.handleSetMainScroll);
+      this.$refs[refValue].removeEventListener("scroll", this.handleMainScroll);
+    },
     methods: {
       handleSetMainScroll(scrollTop) {
         this.$refs[refValue].scrollTop = scrollTop;
@@ -11,14 +16,6 @@ export default function(refValue) {
       handleMainScroll() {
         this.$bus.$emit("mainScroll", this.$refs[refValue]);
       },
-    },
-    beforeDestroy() {
-      this.$bus.$emit("mainScroll");
-      this.$refs.mainContainer.removeEventListener(
-        "scroll",
-        this.handleMainScroll
-      );
-      this.$bus.$off("setMainScroll", this.handleSetMainScroll);
     },
   };
 }
