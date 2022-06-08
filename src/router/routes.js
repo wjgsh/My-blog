@@ -1,4 +1,5 @@
 import "nprogress/nprogress.css";
+import NotFound from "@/views/NotFound.vue";
 import { start, done, configure } from "nprogress";
 
 configure({
@@ -19,7 +20,7 @@ function getPageComponent(pageCompoResolve) {
     if (process.env.NODE_ENV === "development") {
       await delay(2000);
     }
-    const comp = await pageCompoResolve;
+    const comp = await pageCompoResolve();
     done();
     return comp;
   };
@@ -95,5 +96,10 @@ export default [
     meta: {
       title: "留言板",
     },
+  },
+  {
+    name: "NotFound",
+    path: "*",
+    component: NotFound,
   },
 ];
